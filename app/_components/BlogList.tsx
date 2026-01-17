@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import type { Post } from './[id]/Post'
+import { MicroCmsPost } from '../_types/MicroCmsPost'
 
 const BlogList = () => {
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<MicroCmsPost[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {

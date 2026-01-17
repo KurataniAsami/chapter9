@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image'
+import { MicroCmsPost } from '../_types/MicroCmsPost'
 
 const PostDetail = () => {
-  const [post, setPost] = useState<Post | null>(null);
+  const [post, setPost] = useState<MicroCmsPost | null>(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams<{ id: string }>();
   const [error, setError] = useState(false);
@@ -45,9 +46,9 @@ const PostDetail = () => {
 
       <div className='flex justify-between mx-5 items-center my-3'>
         <div>{post.createdAt}</div>
-        {/* <div className='border-2 border-blue-500 rounded px-2 py-1 text-blue-500 inline-block'>
+        <div className='border-2 border-blue-500 rounded px-2 py-1 text-blue-500 inline-block'>
           {post.categories.join('')}
-        </div> */}
+        </div>
       </div>
       <h2  className='text-2xl mb-3 mx-4'>
         {post.title}

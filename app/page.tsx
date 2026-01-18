@@ -1,9 +1,13 @@
-import Image from "next/image";
+'use client'
+import BlogList from '@/app/_components/BlogList'
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <div>
-      <h1>test</h1>
-    </div>
-  );
+    <>
+      <BlogList />
+    </>
+  )
 }
+
+export default page

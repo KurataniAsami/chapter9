@@ -47,7 +47,9 @@ const PostDetail = () => {
       <div className='flex justify-between mx-5 items-center my-3'>
         <div>{post.createdAt}</div>
         <div className='border-2 border-blue-500 rounded px-2 py-1 text-blue-500 inline-block'>
-          {post.categories.join('')}
+          {post.categories.map((category) => (
+            <span key={category.id}>{category.name}</span>
+          ))}
         </div>
       </div>
       <h2  className='text-2xl mb-3 mx-4'>

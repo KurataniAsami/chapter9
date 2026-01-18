@@ -39,9 +39,9 @@ const BlogList = () => {
           >
             <div className='flex justify-between mx-4 my-4'>
               <div>{post.createdAt}</div>
-              <div className='border-2 border-blue-500 rounded px-2 py-1 text-blue-500'>
-                {post.categories.join('')}
-              </div>
+              {post.categories.map((category) => (
+                <span key={category.id}>{category.name}</span>
+              ))}
             </div>
 
             <h3 className='mx-4 mb-3'>
